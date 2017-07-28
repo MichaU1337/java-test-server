@@ -15,17 +15,14 @@ public class User {
 	@Id
 	@GeneratedValue
 	private Integer id;
-	
 	private String name;
-
 	private String email;
-
 	private String password;
-	
+
 	@ManyToMany
 	@JoinTable
 	private List<Role> roles;
-	
+
 	public List<Blog> getBlogs() {
 		return blogs;
 	}
@@ -76,5 +73,5 @@ public class User {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	
+
 }
